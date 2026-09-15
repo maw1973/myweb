@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>活動報名表</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <h1>活動報名表</h1>
+
+        <p>請填寫以下資料完成活動報名。</p>
+
+
+        <form>
+
+            <!-- 姓名 -->
+            <div class="form-group">
+
+                <label for="name">
+                    姓名
+                </label>
+
+                <input type="text"
+                       id="name"
+                       name="name"
+                       required>
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       required>
+
+            </div>
+
+
+            <!-- 報名場次 -->
+            <div class="form-group">
+
+                <label for="session">
+                    報名場次
+                </label>
+
+                <select id="session"
+                        name="session">
+
+                    <option value="">
+                        請選擇場次
+                    </option>
+
+                    <option value="morning">
+                        上午場
+                    </option>
+
+                    <option value="afternoon">
+                        下午場
+                    </option>
+
+                    <option value="evening">
+                        晚上場
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button type="submit">
+                送出報名
+            </button>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>
