@@ -3,14 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>林茂永｜個人履歷網站</title>
+    <meta name="description" content="林茂永個人履歷網站，展示資訊管理學習歷程、ASP.NET Web Forms、C#、SQL Server 技能與專題作品。">
 
-    <title>林茂永｜個人網站</title>
-
-    <link rel="stylesheet"
-          href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -19,7 +17,7 @@
         <div class="nav-container">
 
             <a class="site-title" href="#home">
-                林茂永｜個人網站
+                林茂永｜個人履歷
             </a>
 
             <nav class="main-nav" aria-label="主要導覽">
@@ -35,114 +33,192 @@
     <main>
 
         <!-- 主頁 -->
-        <section id="home" class="page-section hero-section">
+        <section id="home" class="hero-section">
 
-            <h1>活動報名表</h1>
+            <div class="hero-content">
 
-            <p>請填寫以下資料完成活動報名。</p>
+                <div class="hero-text">
+                    <span class="eyebrow">PORTFOLIO · RESUME</span>
 
+                    <h1>你好，我是林茂永</h1>
 
-            <form>
+                    <p class="hero-subtitle">
+                        資訊管理 × Web 系統開發 × 資料庫應用
+                    </p>
 
-                <!-- 姓名 -->
-                <div class="form-group">
+                    <p class="hero-description">
+                        專注於 ASP.NET Web Forms、C# 與 SQL Server，
+                        將課堂所學轉化成可以實際操作的資訊系統，
+                        並持續強化前端介面、資料視覺化與系統整合能力。
+                    </p>
 
-                    <label for="name">
-                        姓名
-                    </label>
-
-                    <input type="text"
-                           id="name"
-                           name="name"
-                           required>
-
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#resume">查看我的履歷</a>
+                        <a class="btn btn-secondary" href="#about">認識我</a>
+                    </div>
                 </div>
 
-
-                <!-- Email -->
-                <div class="form-group">
-
-                    <label for="email">
-                        Email
-                    </label>
-
-                    <input type="email"
-                           id="email"
-                           name="email"
-                           required>
-
+                <div class="hero-photo-wrap" aria-label="個人頭像">
+                    <div class="initial-avatar">林</div>
+                    <p>個人履歷網站</p>
                 </div>
 
-
-                <!-- 報名場次 -->
-                <div class="form-group">
-
-                    <label for="session">
-                        報名場次
-                    </label>
-
-                    <select id="session"
-                            name="session">
-
-                        <option value="">
-                            請選擇場次
-                        </option>
-
-                        <option value="morning">
-                            上午場
-                        </option>
-
-                        <option value="afternoon">
-                            下午場
-                        </option>
-
-                        <option value="evening">
-                            晚上場
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <button type="submit">
-                    送出報名
-                </button>
-
-            </form>
+            </div>
 
         </section>
 
 
         <!-- 我的履歷 -->
-        <section id="resume" class="page-section info-section">
+        <section id="resume" class="page-section">
 
-            <h2>我的履歷</h2>
+            <div class="section-heading">
+                <span>RESUME</span>
+                <h2>我的履歷</h2>
+                <p>學歷、專業技能與實作專案</p>
+            </div>
 
-            <p class="section-intro">
-                此區可放置學歷、專長、技能、作品與相關經歷。
-            </p>
 
-            <div class="content-card">
-                <h3>學歷與專長</h3>
-                <p>之後可將你的正式履歷資料放在這裡。</p>
+            <div class="resume-grid">
+
+                <article class="resume-card">
+                    <div class="card-icon">01</div>
+                    <h3>學歷</h3>
+
+                    <div class="timeline-item">
+                        <h4>國立勤益科技大學</h4>
+                        <p class="meta">資訊管理系｜進修部</p>
+                        <p>
+                            學習資訊系統開發、資料庫設計、系統分析與專題實作，
+                            並以 Web 系統開發作為主要實作方向。
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>國立中興大學</h4>
+                        <p class="meta">數位人文與文創相關課程</p>
+                        <p>
+                            延伸資訊科技與人文應用的跨領域學習。
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="resume-card">
+                    <div class="card-icon">02</div>
+                    <h3>專業技能</h3>
+
+                    <div class="skill-list">
+                        <span>C#</span>
+                        <span>ASP.NET Web Forms</span>
+                        <span>SQL Server</span>
+                        <span>Stored Procedure</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Bootstrap</span>
+                        <span>JavaScript</span>
+                        <span>Chart.js</span>
+                        <span>Responsive Web Design</span>
+                        <span>Git / GitHub</span>
+                    </div>
+                </article>
+
+            </div>
+
+
+            <div class="project-area">
+
+                <h3 class="project-title">實作作品</h3>
+
+                <div class="project-grid">
+
+                    <article class="project-card">
+                        <span class="project-tag">ASP.NET Web Forms</span>
+                        <h4>FamilyCareWeb｜醫路安心</h4>
+                        <p>
+                            家庭醫療排程與服藥管理系統，整合今日待辦、回診提醒、
+                            慢箋領藥、疫苗提醒與健康量測等功能。
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-tag">SQL Server</span>
+                        <h4>MyDegreePlanner｜學分與成績規劃</h4>
+                        <p>
+                            以畢業學分、修課紀錄、預選課程與成績模擬為核心，
+                            提供畢業檢核與視覺化學習進度。
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-tag">AI + Data</span>
+                        <h4>ForceTrend AI｜趨勢分析</h4>
+                        <p>
+                            結合公開資料、Python 模型與 Web Dashboard，
+                            進行兵源、志願役來源及留營趨勢的資料分析與預測展示。
+                        </p>
+                    </article>
+
+                </div>
+
             </div>
 
         </section>
 
 
         <!-- 關於我 -->
-        <section id="about" class="page-section info-section">
+        <section id="about" class="page-section about-section">
 
-            <h2>關於我</h2>
+            <div class="section-heading">
+                <span>ABOUT ME</span>
+                <h2>關於我</h2>
+                <p>持續學習，也把每一次學習做成真正能操作的作品</p>
+            </div>
 
-            <p class="section-intro">
-                此區可放置自我介紹、學習歷程、興趣與個人特色。
-            </p>
+            <div class="about-grid">
 
-            <div class="content-card">
-                <h3>自我介紹</h3>
-                <p>之後可將你的自傳或個人簡介放在這裡。</p>
+                <div class="about-copy">
+                    <h3>從學習走向實作</h3>
+
+                    <p>
+                        我目前以資訊管理與 Web 系統開發為主要學習方向。
+                        相較於只完成課堂作業，我更重視把需求轉化成實際可操作的系統，
+                        從資料庫設計、後端程式、前端介面，到除錯與部署，都親自實作。
+                    </p>
+
+                    <p>
+                        我的主要開發工具為 Visual Studio、C#、ASP.NET Web Forms
+                        與 SQL Server，也持續加入 Bootstrap、JavaScript、
+                        Chart.js、GitHub 與 Python 資料分析等技術。
+                    </p>
+
+                    <p>
+                        未來希望持續累積系統開發與資料應用能力，
+                        讓自己的作品兼具實用性、可維護性與良好的使用體驗。
+                    </p>
+                </div>
+
+                <aside class="about-facts">
+                    <div>
+                        <strong>主要方向</strong>
+                        <span>Web 系統開發</span>
+                    </div>
+
+                    <div>
+                        <strong>核心技術</strong>
+                        <span>C# / Web Forms / SQL Server</span>
+                    </div>
+
+                    <div>
+                        <strong>開發工具</strong>
+                        <span>Visual Studio / GitHub</span>
+                    </div>
+
+                    <div>
+                        <strong>學習特色</strong>
+                        <span>需求分析 × 實作 × 除錯</span>
+                    </div>
+                </aside>
+
             </div>
 
         </section>
@@ -151,7 +227,7 @@
 
 
     <footer>
-        <p>© 2026 林茂永｜個人網站</p>
+        <p>© 2026 林茂永｜個人履歷網站</p>
     </footer>
 
 </body>
