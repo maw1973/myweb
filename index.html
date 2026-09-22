@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>活動報名表</title>
+    <title>林茂永｜個人網站</title>
 
     <link rel="stylesheet"
           href="css/style.css">
@@ -15,83 +15,144 @@
 
 <body>
 
+    <header class="site-header">
+        <div class="nav-container">
+
+            <a class="site-title" href="#home">
+                林茂永｜個人網站
+            </a>
+
+            <nav class="main-nav" aria-label="主要導覽">
+                <a href="#home">主頁</a>
+                <a href="#resume">我的履歷</a>
+                <a href="#about">關於我</a>
+            </nav>
+
+        </div>
+    </header>
+
+
     <main>
 
-        <h1>活動報名表</h1>
+        <!-- 主頁 -->
+        <section id="home" class="page-section hero-section">
 
-        <p>請填寫以下資料完成活動報名。</p>
+            <h1>活動報名表</h1>
+
+            <p>請填寫以下資料完成活動報名。</p>
 
 
-        <form>
+            <form>
 
-            <!-- 姓名 -->
-            <div class="form-group">
+                <!-- 姓名 -->
+                <div class="form-group">
 
-                <label for="name">
-                    姓名
-                </label>
+                    <label for="name">
+                        姓名
+                    </label>
 
-                <input type="text"
-                       id="name"
-                       name="name"
-                       required>
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           required>
 
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           required>
+
+                </div>
+
+
+                <!-- 報名場次 -->
+                <div class="form-group">
+
+                    <label for="session">
+                        報名場次
+                    </label>
+
+                    <select id="session"
+                            name="session">
+
+                        <option value="">
+                            請選擇場次
+                        </option>
+
+                        <option value="morning">
+                            上午場
+                        </option>
+
+                        <option value="afternoon">
+                            下午場
+                        </option>
+
+                        <option value="evening">
+                            晚上場
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="submit">
+                    送出報名
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- 我的履歷 -->
+        <section id="resume" class="page-section info-section">
+
+            <h2>我的履歷</h2>
+
+            <p class="section-intro">
+                此區可放置學歷、專長、技能、作品與相關經歷。
+            </p>
+
+            <div class="content-card">
+                <h3>學歷與專長</h3>
+                <p>之後可將你的正式履歷資料放在這裡。</p>
             </div>
 
+        </section>
 
-            <!-- Email -->
-            <div class="form-group">
 
-                <label for="email">
-                    Email
-                </label>
+        <!-- 關於我 -->
+        <section id="about" class="page-section info-section">
 
-                <input type="email"
-                       id="email"
-                       name="email"
-                       required>
+            <h2>關於我</h2>
 
+            <p class="section-intro">
+                此區可放置自我介紹、學習歷程、興趣與個人特色。
+            </p>
+
+            <div class="content-card">
+                <h3>自我介紹</h3>
+                <p>之後可將你的自傳或個人簡介放在這裡。</p>
             </div>
 
-
-            <!-- 報名場次 -->
-            <div class="form-group">
-
-                <label for="session">
-                    報名場次
-                </label>
-
-                <select id="session"
-                        name="session">
-
-                    <option value="">
-                        請選擇場次
-                    </option>
-
-                    <option value="morning">
-                        上午場
-                    </option>
-
-                    <option value="afternoon">
-                        下午場
-                    </option>
-
-                    <option value="evening">
-                        晚上場
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <button type="submit">
-                送出報名
-            </button>
-
-        </form>
+        </section>
 
     </main>
+
+
+    <footer>
+        <p>© 2026 林茂永｜個人網站</p>
+    </footer>
 
 </body>
 
