@@ -16,6 +16,8 @@ html {
     --line: #dfe7ee;
     --paper: #ffffff;
     --bg: #f4f7fa;
+    --danger: #c62828;
+    --danger-soft: #fff3f3;
 }
 
 body {
@@ -383,6 +385,106 @@ section {
 }
 
 
+/* 聯絡表單 */
+.contact-box {
+    max-width: 720px;
+    margin: 44px auto 0;
+    padding: 30px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: #f8fbfd;
+}
+
+.contact-heading {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-heading > span {
+    color: var(--blue);
+    font-size: .78rem;
+    font-weight: 900;
+    letter-spacing: .14em;
+}
+
+.contact-heading h3 {
+    margin: 5px 0 2px;
+    color: var(--navy);
+    font-size: 1.45rem;
+}
+
+.contact-heading p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--navy);
+    font-weight: 800;
+}
+
+.form-group input {
+    width: 100%;
+    min-height: 48px;
+    padding: 11px 13px;
+    border: 1px solid #bcc9d4;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(47, 111, 165, .12);
+}
+
+.form-group input.input-error {
+    border-color: var(--danger);
+    background: var(--danger-soft);
+    box-shadow: 0 0 0 3px rgba(198, 40, 40, .08);
+}
+
+.error-message {
+    min-height: 1.6em;
+    margin: 6px 0 0;
+    color: var(--danger);
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 11px;
+    background: var(--navy);
+    color: #fff;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: var(--navy-2);
+    transform: translateY(-1px);
+}
+
+.submit-btn:disabled,
+.submit-btn.sent {
+    background: #9aa3ab;
+    color: #f4f4f4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
 /* 頁尾 */
 footer {
     margin-top: 55px;
@@ -479,6 +581,10 @@ footer p {
     .hero-text h1 {
         font-size: 2.35rem;
     }
+
+    .contact-box {
+        padding: 22px 16px;
+    }
 }
 
 
@@ -486,6 +592,7 @@ footer p {
 @media print {
     .site-header,
     .hero-actions,
+    .contact-box,
     footer {
         display: none;
     }
