@@ -3,14 +3,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailInput = document.getElementById("email");
     const emailError = document.getElementById("emailError");
     const submitBtn = document.getElementById("submitBtn");
+    const resetBtn = document.getElementById("resetBtn");
 
-    if (!form || !emailInput || !emailError || !submitBtn) {
+    if (!form || !emailInput || !emailError || !submitBtn || !resetBtn) {
         return;
     }
 
     function isValidEmail(value) {
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
         return emailPattern.test(value.trim());
+    }
+
+    function clearEmailError() {
+        emailInput.classList.remove("input-error");
+        emailError.textContent = "";
     }
 
     function validateEmail() {
@@ -28,15 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
             return false;
         }
 
-        emailInput.classList.remove("input-error");
-        emailError.textContent = "";
+        clearEmailError();
         return true;
     }
 
     emailInput.addEventListener("input", function () {
         if (emailInput.value.trim() === "") {
-            emailInput.classList.remove("input-error");
-            emailError.textContent = "";
+            clearEmailError();
             return;
         }
 
@@ -44,6 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     emailInput.addEventListener("blur", validateEmail);
+
+    form.addEventListener("reset", function () {
+        clearEmailError();
+    });
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -56,6 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
         submitBtn.textContent = "已送出";
         submitBtn.disabled = true;
         submitBtn.classList.add("sent");
+
+        resetBtn.disabled = true;
         emailInput.disabled = true;
     });
 });
