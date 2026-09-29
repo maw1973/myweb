@@ -457,9 +457,16 @@ section {
     font-weight: 700;
 }
 
-.submit-btn {
-    width: 100%;
+.form-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
     margin-top: 12px;
+}
+
+.submit-btn,
+.reset-btn {
+    width: 100%;
     padding: 12px 20px;
     border: 0;
     border-radius: 11px;
@@ -476,10 +483,27 @@ section {
     transform: translateY(-1px);
 }
 
+.reset-btn {
+    border: 1px solid #b8c4cf;
+    border-radius: 11px;
+    background: #ffffff;
+    color: var(--navy);
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.reset-btn:hover:not(:disabled) {
+    background: var(--blue-soft);
+}
+
 .submit-btn:disabled,
-.submit-btn.sent {
+.submit-btn.sent,
+.reset-btn:disabled {
     background: #9aa3ab;
     color: #f4f4f4;
+    border-color: #9aa3ab;
     cursor: not-allowed;
     transform: none;
 }
