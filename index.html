@@ -3,268 +3,1254 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>林茂永｜個人履歷網站</title>
-    <meta name="description" content="林茂永個人履歷網站，展示資訊管理學習歷程、ASP.NET Web Forms、C#、SQL Server 技能與專題作品。">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
+    <title>Sweet Day 甜日子｜甜點線上預訂系統</title>
+
+    <meta name="description"
+          content="Sweet Day 甜日子甜點線上預訂系統，提供商品瀏覽、尺寸選擇、門市取貨、到店付款、訂單查詢與店員管理。">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- 自訂 CSS -->
+    <link rel="stylesheet"
+          href="css/style.css">
 </head>
+
 
 <body>
 
-    <header class="site-header">
-        <div class="nav-container">
+    <!-- =========================
+         導覽列
+    ========================== -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
 
-            <a class="site-title" href="#home">
-                林茂永｜個人履歷
+        <div class="container">
+
+            <a class="navbar-brand brand-title"
+               href="#home">
+
+                <i class="bi bi-cake2-fill"></i>
+                Sweet Day 甜日子
+
             </a>
 
-            <nav class="main-nav" aria-label="主要導覽">
-                <a href="#home">主頁</a>
-                <a href="#resume">我的履歷</a>
-                <a href="#about">關於我</a>
-            </nav>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="切換導覽列">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse"
+                 id="mainNavbar">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="#home">
+                            首頁
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="#products">
+                            商品
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="#order">
+                            線上預訂
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="#myOrders">
+                            我的訂單
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="#admin">
+                            店員管理
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
 
         </div>
+
+    </nav>
+
+
+    <!-- =========================
+         首頁
+    ========================== -->
+    <header id="home"
+            class="hero-section">
+
+        <div class="container">
+
+            <div class="row align-items-center min-vh-100">
+
+                <div class="col-lg-6">
+
+                    <span class="small-title">
+                        ONLINE DESSERT ORDER
+                    </span>
+
+                    <h1>
+                        甜點預訂，
+                        <br>
+                        手機就能完成。
+                    </h1>
+
+                    <p class="hero-description">
+
+                        商品、尺寸、數量、取貨日期與時間一次填完整，
+                        不必再用電話反覆確認。
+
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a href="#products"
+                           class="btn btn-main">
+
+                            瀏覽甜點
+
+                        </a>
+
+                        <a href="#order"
+                           class="btn btn-outline-main">
+
+                            立即預訂
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-points">
+
+                        <span>
+                            <i class="bi bi-phone"></i>
+                            手機預訂
+                        </span>
+
+                        <span>
+                            <i class="bi bi-shop"></i>
+                            門市取貨
+                        </span>
+
+                        <span>
+                            <i class="bi bi-wallet2"></i>
+                            到店付款
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <div class="hero-card">
+
+                        <div class="hero-emoji">
+                            🍰
+                        </div>
+
+                        <h3>
+                            今日推薦
+                        </h3>
+
+                        <p>
+                            草莓鮮奶油蛋糕
+                        </p>
+
+                        <span>
+                            6 吋 NT$ 680
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </header>
 
 
-    <main>
+    <!-- =========================
+         預訂流程
+    ========================== -->
+    <section class="process-section">
 
-        <!-- 主頁 -->
-        <section id="home" class="hero-section">
+        <div class="container">
 
-            <div class="hero-content">
+            <div class="section-title">
 
-                <div class="hero-text">
-                    <span class="eyebrow">PORTFOLIO · RESUME</span>
+                <span>
+                    ORDER PROCESS
+                </span>
 
-                    <h1>你好，我是林茂永</h1>
+                <h2>
+                    四步完成預訂
+                </h2>
 
-                    <p class="hero-subtitle">
-                        資訊管理 × Web 系統開發 × 資料庫應用
-                    </p>
+            </div>
 
-                    <p class="hero-description">
-                        專注於 ASP.NET Web Forms、C# 與 SQL Server，
-                        將課堂所學轉化成可以實際操作的資訊系統，
-                        並持續強化前端介面、資料視覺化與系統整合能力。
-                    </p>
 
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="#resume">查看我的履歷</a>
-                        <a class="btn btn-secondary" href="#about">認識我</a>
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="process-card">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <i class="bi bi-grid process-icon"></i>
+
+                        <h4>
+                            瀏覽商品
+                        </h4>
+
+                        <p>
+                            查看目前供應中的甜點。
+                        </p>
+
                     </div>
+
                 </div>
 
-                <div class="hero-photo-wrap" aria-label="個人頭像">
-                    <div class="initial-avatar">林</div>
-                    <p>個人履歷網站</p>
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="process-card">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <i class="bi bi-search process-icon"></i>
+
+                        <h4>
+                            查看詳細
+                        </h4>
+
+                        <p>
+                            查看尺寸、價格與供應狀態。
+                        </p>
+
+                    </div>
+
                 </div>
 
-            </div>
 
-        </section>
+                <div class="col-md-6 col-lg-3">
 
+                    <div class="process-card">
 
-        <!-- 我的履歷 -->
-        <section id="resume" class="page-section">
+                        <div class="step-number">
+                            3
+                        </div>
 
-            <div class="section-heading">
-                <span>RESUME</span>
-                <h2>我的履歷</h2>
-                <p>學歷、專業技能與實作專案</p>
-            </div>
+                        <i class="bi bi-calendar-check process-icon"></i>
 
+                        <h4>
+                            選擇取貨
+                        </h4>
 
-            <div class="resume-grid">
-
-                <article class="resume-card">
-                    <div class="card-icon">01</div>
-                    <h3>學歷</h3>
-
-                    <div class="timeline-item">
-                        <h4>國立勤益科技大學</h4>
-                        <p class="meta">資訊管理系｜進修部</p>
                         <p>
-                            學習資訊系統開發、資料庫設計、系統分析與專題實作，
-                            並以 Web 系統開發作為主要實作方向。
+                            選擇日期、時段與數量。
                         </p>
+
                     </div>
 
-                    <div class="timeline-item">
-                        <h4>國立中興大學</h4>
-                        <p class="meta">數位人文與文創相關課程</p>
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="process-card">
+
+                        <div class="step-number">
+                            4
+                        </div>
+
+                        <i class="bi bi-check-circle process-icon"></i>
+
+                        <h4>
+                            完成預訂
+                        </h4>
+
                         <p>
-                            延伸資訊科技與人文應用的跨領域學習。
+                            系統自動產生訂單編號。
                         </p>
+
                     </div>
-                </article>
-
-
-                <article class="resume-card">
-                    <div class="card-icon">02</div>
-                    <h3>專業技能</h3>
-
-                    <div class="skill-list">
-                        <span>C#</span>
-                        <span>ASP.NET Web Forms</span>
-                        <span>SQL Server</span>
-                        <span>Stored Procedure</span>
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>Bootstrap</span>
-                        <span>JavaScript</span>
-                        <span>Chart.js</span>
-                        <span>Responsive Web Design</span>
-                        <span>Git / GitHub</span>
-                    </div>
-                </article>
-
-            </div>
-
-
-            <div class="project-area">
-
-                <h3 class="project-title">實作作品</h3>
-
-                <div class="project-grid">
-
-                    <article class="project-card">
-                        <span class="project-tag">ASP.NET Web Forms</span>
-                        <h4>FamilyCareWeb｜醫路安心</h4>
-                        <p>
-                            家庭醫療排程與服藥管理系統，整合今日待辦、回診提醒、
-                            慢箋領藥、疫苗提醒與健康量測等功能。
-                        </p>
-                    </article>
-
-                    <article class="project-card">
-                        <span class="project-tag">SQL Server</span>
-                        <h4>MyDegreePlanner｜學分與成績規劃</h4>
-                        <p>
-                            以畢業學分、修課紀錄、預選課程與成績模擬為核心，
-                            提供畢業檢核與視覺化學習進度。
-                        </p>
-                    </article>
-
-                    <article class="project-card">
-                        <span class="project-tag">AI + Data</span>
-                        <h4>ForceTrend AI｜趨勢分析</h4>
-                        <p>
-                            結合公開資料、Python 模型與 Web Dashboard，
-                            進行兵源、志願役來源及留營趨勢的資料分析與預測展示。
-                        </p>
-                    </article>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- 關於我 -->
-        <section id="about" class="page-section about-section">
+    <!-- =========================
+         商品區
+    ========================== -->
+    <section id="products"
+             class="products-section">
 
-            <div class="section-heading">
-                <span>ABOUT ME</span>
-                <h2>關於我</h2>
-                <p>持續學習，也把每一次學習做成真正能操作的作品</p>
-            </div>
+        <div class="container">
 
-            <div class="about-grid">
+            <div class="section-title">
 
-                <div class="about-copy">
-                    <h3>從學習走向實作</h3>
+                <span>
+                    DESSERT MENU
+                </span>
 
-                    <p>
-                        我目前以資訊管理與 Web 系統開發為主要學習方向。
-                        相較於只完成課堂作業，我更重視把需求轉化成實際可操作的系統，
-                        從資料庫設計、後端程式、前端介面，到除錯與部署，都親自實作。
-                    </p>
+                <h2>
+                    甜點商品
+                </h2>
 
-                    <p>
-                        我的主要開發工具為 Visual Studio、C#、ASP.NET Web Forms
-                        與 SQL Server，也持續加入 Bootstrap、JavaScript、
-                        Chart.js、GitHub 與 Python 資料分析等技術。
-                    </p>
-
-                    <p>
-                        未來希望持續累積系統開發與資料應用能力，
-                        讓自己的作品兼具實用性、可維護性與良好的使用體驗。
-                    </p>
-                </div>
-
-                <aside class="about-facts">
-                    <div>
-                        <strong>主要方向</strong>
-                        <span>Web 系統開發</span>
-                    </div>
-
-                    <div>
-                        <strong>核心技術</strong>
-                        <span>C# / Web Forms / SQL Server</span>
-                    </div>
-
-                    <div>
-                        <strong>開發工具</strong>
-                        <span>Visual Studio / GitHub</span>
-                    </div>
-
-                    <div>
-                        <strong>學習特色</strong>
-                        <span>需求分析 × 實作 × 除錯</span>
-                    </div>
-                </aside>
+                <p>
+                    商品照片、介紹、尺寸、價格與供應狀態由店家維護。
+                </p>
 
             </div>
 
-            <!-- Email 即時驗證與送出按鈕 -->
-            <div class="contact-box">
-                <div class="contact-heading">
-                    <span>CONTACT</span>
-                    <h3>聯絡我</h3>
-                    <p>輸入 Email，系統會即時檢查格式。</p>
+
+            <div class="category-buttons">
+
+                <button class="category-btn active"
+                        data-category="all">
+                    全部
+                </button>
+
+                <button class="category-btn"
+                        data-category="cake">
+                    蛋糕
+                </button>
+
+                <button class="category-btn"
+                        data-category="dessert">
+                    小甜點
+                </button>
+
+                <button class="category-btn"
+                        data-category="gift">
+                    禮盒
+                </button>
+
+            </div>
+
+
+            <div class="row g-4"
+                 id="productList">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         線上預訂
+    ========================== -->
+    <section id="order"
+             class="order-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>
+                    ONLINE ORDER
+                </span>
+
+                <h2>
+                    線上預訂
+                </h2>
+
+                <p>
+                    請完整填寫資料，送出前系統會再次檢查。
+                </p>
+
+            </div>
+
+
+            <!-- 規則 -->
+            <div class="order-rule-box">
+
+                <div class="row g-3">
+
+                    <div class="col-md-4">
+
+                        <div class="rule-item">
+
+                            <i class="bi bi-shop"></i>
+
+                            <div>
+
+                                <strong>
+                                    門市取貨
+                                </strong>
+
+                                <span>
+                                    目前不提供宅配服務
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="rule-item">
+
+                            <i class="bi bi-wallet2"></i>
+
+                            <div>
+
+                                <strong>
+                                    到店付款
+                                </strong>
+
+                                <span>
+                                    取貨時於門市付款
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="rule-item">
+
+                            <i class="bi bi-calendar2-check"></i>
+
+                            <div>
+
+                                <strong>
+                                    提前 2 天
+                                </strong>
+
+                                <span>
+                                    每週一不提供取貨
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <form id="contactForm" novalidate>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="例如：name@example.com"
-                            autocomplete="email"
-                            aria-describedby="emailError"
-                            required>
-                        <p id="emailError" class="error-message" aria-live="polite"></p>
+            </div>
+
+
+            <div class="order-box">
+
+                <form id="orderForm">
+
+                    <div class="row g-4">
+
+                        <!-- 姓名 -->
+                        <div class="col-md-6">
+
+                            <label for="customerName"
+                                   class="form-label">
+
+                                姓名 *
+
+                            </label>
+
+                            <input type="text"
+                                   id="customerName"
+                                   class="form-control"
+                                   placeholder="請輸入姓名"
+                                   required>
+
+                        </div>
+
+
+                        <!-- 手機 -->
+                        <div class="col-md-6">
+
+                            <label for="customerPhone"
+                                   class="form-label">
+
+                                手機號碼 *
+
+                            </label>
+
+                            <input type="tel"
+                                   id="customerPhone"
+                                   class="form-control"
+                                   placeholder="例如：0912345678"
+                                   maxlength="10"
+                                   required>
+
+                        </div>
+
+
+                        <!-- 商品 -->
+                        <div class="col-md-6">
+
+                            <label for="productSelect"
+                                   class="form-label">
+
+                                商品 *
+
+                            </label>
+
+                            <select id="productSelect"
+                                    class="form-select"
+                                    required>
+
+                                <option value="">
+                                    請選擇商品
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- 尺寸 -->
+                        <div class="col-md-3">
+
+                            <label for="sizeSelect"
+                                   class="form-label">
+
+                                尺寸 *
+
+                            </label>
+
+                            <select id="sizeSelect"
+                                    class="form-select"
+                                    required>
+
+                                <option value="">
+                                    請先選商品
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- 數量 -->
+                        <div class="col-md-3">
+
+                            <label for="quantity"
+                                   class="form-label">
+
+                                數量 *
+
+                            </label>
+
+                            <input type="number"
+                                   id="quantity"
+                                   class="form-control"
+                                   value="1"
+                                   min="1"
+                                   max="20"
+                                   required>
+
+                        </div>
+
+
+                        <!-- 取貨日期 -->
+                        <div class="col-md-6">
+
+                            <label for="pickupDate"
+                                   class="form-label">
+
+                                取貨日期 *
+
+                            </label>
+
+                            <input type="date"
+                                   id="pickupDate"
+                                   class="form-control"
+                                   required>
+
+                            <div class="form-text"
+                                 id="pickupDateHint">
+
+                                至少需提前 2 天預訂，每週一公休。
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- 取貨時間 -->
+                        <div class="col-md-6">
+
+                            <label for="pickupTime"
+                                   class="form-label">
+
+                                取貨時段 *
+
+                            </label>
+
+                            <select id="pickupTime"
+                                    class="form-select"
+                                    required>
+
+                                <option value="">
+                                    請選擇取貨時間
+                                </option>
+
+                                <option value="11:00">
+                                    11:00
+                                </option>
+
+                                <option value="12:00">
+                                    12:00
+                                </option>
+
+                                <option value="13:00">
+                                    13:00
+                                </option>
+
+                                <option value="14:00">
+                                    14:00
+                                </option>
+
+                                <option value="15:00">
+                                    15:00
+                                </option>
+
+                                <option value="16:00">
+                                    16:00
+                                </option>
+
+                                <option value="17:00">
+                                    17:00
+                                </option>
+
+                                <option value="18:00">
+                                    18:00
+                                </option>
+
+                                <option value="19:00">
+                                    19:00
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- 蠟燭 -->
+                        <div class="col-md-6">
+
+                            <label for="candle"
+                                   class="form-label">
+
+                                蠟燭
+
+                            </label>
+
+                            <select id="candle"
+                                    class="form-select">
+
+                                <option value="不需要">
+                                    不需要
+                                </option>
+
+                                <option value="需要">
+                                    需要
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- 餐具 -->
+                        <div class="col-md-6">
+
+                            <label for="tableware"
+                                   class="form-label">
+
+                                餐具
+
+                            </label>
+
+                            <select id="tableware"
+                                    class="form-select">
+
+                                <option value="不需要">
+                                    不需要
+                                </option>
+
+                                <option value="需要">
+                                    需要
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- 蛋糕文字 -->
+                        <div class="col-12">
+
+                            <label for="cakeMessage"
+                                   class="form-label">
+
+                                蛋糕文字
+
+                            </label>
+
+                            <input type="text"
+                                   id="cakeMessage"
+                                   class="form-control"
+                                   maxlength="30"
+                                   placeholder="例如：媽媽生日快樂">
+
+                        </div>
+
+
+                        <!-- 備註 -->
+                        <div class="col-12">
+
+                            <label for="note"
+                                   class="form-label">
+
+                                備註
+
+                            </label>
+
+                            <textarea id="note"
+                                      class="form-control"
+                                      rows="4"
+                                      placeholder="其他需求可填寫在這裡"></textarea>
+
+                        </div>
+
+
+                        <!-- 付款方式 -->
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                付款方式
+                            </label>
+
+                            <input type="text"
+                                   class="form-control"
+                                   value="到店付款"
+                                   disabled>
+
+                        </div>
+
+
+                        <!-- 取貨方式 -->
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                取貨方式
+                            </label>
+
+                            <input type="text"
+                                   class="form-control"
+                                   value="門市取貨"
+                                   disabled>
+
+                        </div>
+
+
+                        <!-- 總額 -->
+                        <div class="col-12">
+
+                            <div class="order-total-box">
+
+                                預估金額：
+
+                                <strong id="estimatedTotal">
+                                    NT$ 0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <button type="submit"
+                                    class="btn btn-submit">
+
+                                <i class="bi bi-check-circle"></i>
+
+                                確認送出預訂
+
+                            </button>
+
+                        </div>
+
                     </div>
 
-                    <div class="form-actions">
-                        <button type="submit" id="submitBtn" class="submit-btn">
-                            送出
-                        </button>
-
-                        <button type="reset" id="resetBtn" class="reset-btn">
-                            重設
-                        </button>
-                    </div>
                 </form>
+
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
 
 
-    <footer>
-        <p>© 2026 林茂永｜個人履歷網站</p>
+    <!-- =========================
+         預訂成功
+    ========================== -->
+    <section id="successSection"
+             class="success-section d-none">
+
+        <div class="container">
+
+            <div class="success-box">
+
+                <i class="bi bi-check-circle-fill success-icon"></i>
+
+                <h2>
+                    預訂成功
+                </h2>
+
+                <p>
+                    請保存以下訂單資訊。
+                </p>
+
+                <div id="successOrderDetail">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         我的訂單
+    ========================== -->
+    <section id="myOrders"
+             class="my-orders-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>
+                    MY ORDERS
+                </span>
+
+                <h2>
+                    我的訂單
+                </h2>
+
+                <p>
+                    請輸入預訂時填寫的手機號碼。
+                </p>
+
+            </div>
+
+
+            <div class="search-box">
+
+                <div class="row g-3">
+
+                    <div class="col-md-9">
+
+                        <input type="tel"
+                               id="searchPhone"
+                               class="form-control"
+                               placeholder="例如：0912345678">
+
+                    </div>
+
+
+                    <div class="col-md-3">
+
+                        <button class="btn btn-search w-100"
+                                onclick="searchOrders()">
+
+                            <i class="bi bi-search"></i>
+
+                            查詢
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="customerOrderResult">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         店員管理
+    ========================== -->
+    <section id="admin"
+             class="admin-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>
+                    STAFF MANAGEMENT
+                </span>
+
+                <h2>
+                    店員管理
+                </h2>
+
+                <p>
+                    模擬店家維護訂單與商品供應狀態。
+                </p>
+
+            </div>
+
+
+            <ul class="nav nav-pills admin-tabs mb-4">
+
+                <li class="nav-item">
+
+                    <button class="nav-link active"
+                            data-bs-toggle="pill"
+                            data-bs-target="#orderManagement">
+
+                        訂單管理
+
+                    </button>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <button class="nav-link"
+                            data-bs-toggle="pill"
+                            data-bs-target="#productManagement">
+
+                        商品供應管理
+
+                    </button>
+
+                </li>
+
+            </ul>
+
+
+            <div class="tab-content">
+
+                <!-- 訂單管理 -->
+                <div class="tab-pane fade show active"
+                     id="orderManagement">
+
+                    <div class="admin-toolbar">
+
+                        <button class="admin-filter active"
+                                onclick="filterAdminOrders('全部', this)">
+                            全部
+                        </button>
+
+                        <button class="admin-filter"
+                                onclick="filterAdminOrders('待確認', this)">
+                            待確認
+                        </button>
+
+                        <button class="admin-filter"
+                                onclick="filterAdminOrders('已確認', this)">
+                            已確認
+                        </button>
+
+                        <button class="admin-filter"
+                                onclick="filterAdminOrders('製作中', this)">
+                            製作中
+                        </button>
+
+                        <button class="admin-filter"
+                                onclick="filterAdminOrders('已完成', this)">
+                            已完成
+                        </button>
+
+                        <button class="admin-filter"
+                                onclick="filterAdminOrders('已取貨', this)">
+                            已取貨
+                        </button>
+
+                    </div>
+
+
+                    <div class="table-responsive admin-table-box">
+
+                        <table class="table align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>訂單編號</th>
+                                    <th>顧客</th>
+                                    <th>商品</th>
+                                    <th>尺寸</th>
+                                    <th>數量</th>
+                                    <th>取貨日期</th>
+                                    <th>時間</th>
+                                    <th>金額</th>
+                                    <th>狀態</th>
+                                    <th>操作</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="adminOrderBody">
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 商品管理 -->
+                <div class="tab-pane fade"
+                     id="productManagement">
+
+                    <div class="table-responsive admin-table-box">
+
+                        <table class="table align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>商品</th>
+                                    <th>分類</th>
+                                    <th>尺寸／價格</th>
+                                    <th>供應狀態</th>
+                                    <th>每日上限</th>
+                                    <th>可預訂天數</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="productManageBody">
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         商品詳細 Modal
+    ========================== -->
+    <div class="modal fade"
+         id="productModal"
+         tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content product-modal">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title"
+                        id="modalProductName">
+                    </h5>
+
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="關閉">
+                    </button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    <div class="row g-4 align-items-center">
+
+                        <div class="col-md-5">
+
+                            <div class="modal-product-image"
+                                 id="modalProductImage">
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-7">
+
+                            <p id="modalDescription">
+                            </p>
+
+                            <p>
+                                <strong>
+                                    供應狀態：
+                                </strong>
+
+                                <span id="modalStatus">
+                                </span>
+                            </p>
+
+
+                            <p>
+                                <strong>
+                                    可預訂：
+                                </strong>
+
+                                <span id="modalAvailableDays">
+                                </span>
+                            </p>
+
+
+                            <p>
+                                <strong>
+                                    取貨規則：
+                                </strong>
+
+                                至少提前 2 天，每週一不可取貨。
+                            </p>
+
+
+                            <div id="modalSizeList">
+                            </div>
+
+
+                            <button class="btn btn-main mt-3"
+                                    id="modalOrderButton">
+
+                                我要預訂
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         Footer
+    ========================== -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <h4>
+                        Sweet Day 甜日子
+                    </h4>
+
+                    <p>
+                        讓甜點預訂更簡單。
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-6 text-md-end">
+
+                    <p>
+                        HTML5 + CSS + JavaScript + Bootstrap 5
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </footer>
 
-    <script src="js/script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 自訂 JS -->
+    <script src="js/app.js"></script>
+
 </body>
 
 </html>
